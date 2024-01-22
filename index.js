@@ -1,4 +1,5 @@
 import aixos from 'axios';
+import './style.css';
 var div = document.querySelector('.container');
 div.innerText = 'Webpack loadd!!';
 
@@ -16,6 +17,7 @@ class App{
   }
   async onNext() {
     // if(this.page-1 <0) return;
+    console.log('here');
     this.page+=1;
     await this.imageLoad();
   }
@@ -23,13 +25,19 @@ class App{
   async imageLoad() {
     const imageLoader = document.querySelector('.image_container');
     const parent = document.querySelector('.parent');
-    parent.removeChild(imageLoader);
-    const nextImageLoader = document.createElement('div');
-    nextImageLoader.className='image_container';
+    imageLoader.classList.add('left');
+    // parent.removeChild(imageLoader);
+    // const nextImageLoader = document.createElement('div');
+    
+    // nextImageLoader.className='image_container';
+    // nextImageLoader.classList.add('left');
+    
     // imageLoader = documment.createElement('div');
-    nextImageLoader.setAttribute("style","width:100%;max-height: 200px;display:flex")
+    imageLoader.setAttribute("style","width:100%;max-height: 200px;display:flex");
+    
     const {data} = await aixos.get(`https://picsum.photos/v2/list?page=${this.page}&limit=10`);
-    data.forEach((v) => {
+    imageLoader.replaceChildren();
+    data.forEach((v,i) => {
       const img = document.createElement('img');
       img.src = v.download_url;
       img.className = "list_img"
@@ -37,19 +45,20 @@ class App{
       img.addEventListener('click', () => {
         document.location.href= 'img.src';
       })
-      nextImageLoader.appendChild(img);
+      imageLoader.appendChild(img);
     });
-    console.log(nextImageLoader);
-    parent.appendChild(nextImageLoader);
+    imageLoader.classList.remove('left');
+    console.log(imageLoader.childNodes);
+    // parent.appendChild(nextImageLoader);
   }
 
   async start() {
     const parent = document.querySelector('.parent');
-    const prevBtn = document.createElement('button');
+    const prevBtn = document.querySelector('.prev');
     parent.setAttribute("style","width:100%;max-height: 200px;display:flex")
     prevBtn.textContent='이전';
     prevBtn.addEventListener('click', () => this.onPrev());
-    const nextBtn = document.createElement('button');
+    const nextBtn = document.querySelector('.forward');
     nextBtn.textContent = '댜음';
     nextBtn.addEventListener('click', () => this.onNext());
     await this.imageLoad();

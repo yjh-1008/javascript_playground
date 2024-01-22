@@ -1,5 +1,17 @@
 .image_container {
-  width: 100%;
+  width: 80%;
+  max-height: 200px;
+  display: flex;
+  order: 2;
+}
+
+.left {
+  transform: translateX(100px);
+  transition: all 2s ease-in;
+}
+
+.parent {
+  width: 80%;
   max-height: 200px;
   display: flex;
 }
@@ -7,4 +19,12 @@
 .list_img {
   width: 100px;
   height: 100px;
+}
+
+.prev {
+  order: 1;
+}
+
+.forward {
+  order: 3;
 }

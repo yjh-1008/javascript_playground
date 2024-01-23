@@ -6,25 +6,34 @@
 }
 
 .left {
-  transform: translateX(100px);
-  transition: all 2s ease-in;
+  transform: translateX(1000px);
+  transition: all 0.7s ease-in;
+}
+
+.right {
+  transform: translateX(-1000px);
+  transition: all 0.7s ease-in;
 }
 
 .parent {
-  width: 80%;
+  width: 1100px;
   max-height: 200px;
   display: flex;
+  align-items: center;
 }
 
 .list_img {
+  border: 1px solid black;
   width: 100px;
   height: 100px;
 }
 
 .prev {
   order: 1;
+  width: 10%;
 }
 
 .forward {
   order: 3;
+  width: 10%;
 }

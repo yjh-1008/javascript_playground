@@ -46,6 +46,39 @@ class App{
     // parent.appendChild(nextImageLoader);
   }
 
+  async pageClick(cur) {
+    const pagination = document.querySelector('.pagination');
+    let prev;
+    for(let i=0;i<pagination.childNodes.length; i++) {
+      if(pagination.childNodes[i].className === 'picked') {
+        prev = Number(pagination.childNodes[i].textContent)-1;
+        pagination.childNodes[i].className = '';
+        pagination.childNodes[cur-1].className = 'picked';
+        break;
+      }
+    }
+    console.log(cur, prev);
+    if(cur-1 === prev) return;
+    this.page = cur-1;
+    if(cur-1 > prev) {
+      await this.imageLoad('left');
+    }else await this.imageLoad('right');
+  }
+
+  generatePage() {
+    //페이지네이션
+    const pagination = document.querySelector('.pagination');
+    for(let i=1;i<=10;i++) {
+      const button = document.createElement('button');
+      button.textContent = i;
+      button.addEventListener('click', () => {
+        this.pageClick(i);
+      });
+      pagination.appendChild(button);
+    }
+    pagination.childNodes[0].className = 'picked'
+  }
+  
   async start() {
     const parent = document.querySelector('.parent');
     const prevBtn = document.querySelector('.prev');
@@ -58,6 +91,9 @@ class App{
     parent.appendChild(prevBtn);
     parent.appendChild(nextBtn);
 
+
+    this.generatePage();
+    
   }
 }
 

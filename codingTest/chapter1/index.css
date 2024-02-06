@@ -1,0 +1,72 @@
+:root {
+  --gray-4: #bdbdbd;
+}
+
+#app {
+  overflow: scroll;
+  font-family: "Noto Sans KR", "sans-serif";
+}
+
+img {
+  width: 100%;
+}
+
+.movie-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 672px;
+  background-color: #333333;
+  height: 100vh;
+}
+
+/* .title {
+  font-size: 37px;
+  font-weight: 700;
+} */
+
+.movie {
+  position: relative;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.poster-container {
+  width: 281px;
+  height: 396px;
+  margin-left: -64px;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.poster-container {
+  position: absolute;
+  left: -64px;
+  width: 281;
+  height: 396px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.star-background > img {
+  width: 51px;
+  height: 51px;
+}
+/* 
+.content-type > span {
+  font-size: 16px;
+  color: var(--gray-4);
+}
+
+
+.remove-star {
+  display: inline;
+}
+
+.like > {
+  background-image: url("./assets/icon_thumbs_up.png");
+}
+
+.heart > i {
+  background-url: url("./assets/icon_heart_fill.png");
+} */

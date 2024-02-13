@@ -14,11 +14,15 @@
     <title>정글 시네마</title>
   </head>
   <body>
+    <div class="nav-skip">
+      <a href="#cont-nav">영화목록 바로가기</a>
+      <a href="#cont-company">회사정보 바로가기</a>
+    </div>
     <section class="cont-movie">
       <h2 class="title-cont">정글 시네마 영화 목록</h2>
       <header>
         <h3 class="sr-only">영화 정보 목록</h3>
-        <nav class="nav-movie">
+        <nav id="cont-nav" class="nav-movie">
           <ul class="list-movieNav">
             <li class="on">
               <a href="#none" class="link-nav">현재 상영 영화</a>
@@ -30,20 +34,25 @@
       </header>
       <section>
         <h3 class="sr-only">현재 상영 영화 목록</h3>
-        <ul>
+        <ul class="list-movieInfo">
           <li>
             <article>
-              <h2>영화 상세 정보</h2>
-              <a href="#none">
-                <img src="#" alt="위니브 월드 : 새로운 시대" />
+              <h2 class="sr-only">영화 상세 정보</h2>
+              <a href="#none" class="link-movie">
+                <img
+                  src="./assets/images/포스터_위니브월드.png"
+                  alt="위니브 월드 : 새로운 시대"
+                />
               </a>
-              <strong>위니브 월드 : 새로운 시대</strong>
-              <dl>
+              <strong class="title-movie sl-ellipsis"
+                >위니브 월드 : 새로운 시대</strong
+              >
+              <dl class="list-info">
                 <div>
-                  <dt>개용</dt>
+                  <dt>내용</dt>
                   <dd>판타지</dd>
                 </div>
-                <div>
+                <div class="item-star">
                   <dt>평점</dt>
                   <dd>9.05</dd>
                 </div>
@@ -53,47 +62,44 @@
                 </div>
                 <div>
                   <dt>출연</dt>
-                  <dd>
+                  <dd class="multi-ellipsis">
                     라이캣, 소돌곰, 개리씨, 빙키, 뮤라, 자바독, 소몰곰, 웨이드
                   </dd>
                 </div>
               </dl>
-              <a href="#none">예매하기</a>
-              <a href="#none">예고편</a>
             </article>
+            <a href="#none" class="link-reserve">예매하기</a>
+            <a href="#none" class="link-teaser">예고편</a>
           </li>
         </ul>
       </section>
     </section>
-    <footer>
-      <section>
+    <footer class="cont-company" id="cont-company">
+      <section class="cont-coInfo">
         <h2 class="sr-only">기업 정보</h2>
-        <strong>Jungle cinema</strong>
-        <dl>
+        <strong class="title-company">Jungle cinema</strong>
+        <dl class="list-coInfo">
           <dt>(주)</dt>
-          <dd>(주)정글 시네마</dd>
-        </dl>
-        <dl>
+          <dd>정글 시네마</dd>
           <dt>대표</dt>
           <dd>라이언</dd>
-        </dl>
-        <dl>
           <dt>사업자 번호</dt>
           <dd>000-0000-0000</dd>
           <dd>광고 영화 및 비디오물 제작업</dd>
-        </dl>
-        <dl>
           <dt>주소</dt>
           <dd>서울특별시</dd>
         </dl>
-        <em>링크 목록</em>
-        <ul>
-          <li><a href="#none">트위터</a></li>
-          <li><a href="#none">인스타그램</a></li>
-          <li><a href="#none">페이스북</a></li>
+
+        <em class="sr-only">링크 목록</em>
+        <ul class="list-sns">
+          <li><a href="#none" class="link-twitter">트위터</a></li>
+          <li><a href="#none" class="link-instargram">인스타그램</a></li>
+          <li><a href="#none" class="link-facebook">페이스북</a></li>
         </ul>
       </section>
-      <small>copyright &copy; The Jungle. ALl rights Reserved.</small>
+      <small class="txt-copy"
+        >copyright &copy; The Jungle. ALl rights Reserved.</small
+      >
     </footer>
   </body>
 </html>

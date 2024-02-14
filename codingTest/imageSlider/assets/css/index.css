@@ -1,0 +1,12 @@
+section {
+  height: 100vh;
+}
+
+.container {
+  padding: 77px 149px 0px 149px;
+}
+
+main {
+  margin-top: 72px;
+  /* display: flex; */
+}

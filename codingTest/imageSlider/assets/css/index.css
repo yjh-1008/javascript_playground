@@ -2,11 +2,60 @@ section {
   height: 100vh;
 }
 
-.container {
+body {
+  padding: 77px 149px 0px 149px !important;
+}
+
+#carousel {
+  margin-top: 72px;
+}
+
+#carousel button {
+  width: 140px;
+  height: 62px;
+  border-radius: 35px;
+  border: 3px solid #828282;
+  color: #828282;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.carousel-cont {
+  display: flex;
+}
+
+.prev-btn {
+  order: 0;
+}
+.carousel-list {
+  order: 1;
+  margin: 0 52px;
+  flex: 1;
+  display: flex;
+}
+
+.next-btn {
+  order: 2;
+}
+
+#image-upload-input {
+  display: none;
+}
+
+form > labe {
   padding: 77px 149px 0px 149px;
 }
 
-main {
-  margin-top: 72px;
-  /* display: flex; */
+form > label > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f80ed;
+  border-radius: 10px;
+  width: 185px;
+  height: 54px;
+  color: white;
+  font-weight: 700;
 }

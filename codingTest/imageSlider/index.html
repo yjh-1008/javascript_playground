@@ -16,26 +16,25 @@
   <body>
     <form>
       <input type="file" id="image-upload-input" />
-      <label for="image-upload-input">이미지 업로드</label>
+      <label for="image-upload-input"><div>이미지 업로드</div></label>
     </form>
-    <section>
-      <div class="container">
-        <main>
-          <ul class="list" type="list">
-            <li class="item">
-              <img src="" alt="1" />
-            </li>
-            <li class="item">
-              <img src="" alt="2" />
-            </li>
-            <li class="item">
-              <img src="" alt="3" />
-            </li>
-          </ul>
-          <button type="button">&laquo;Prev</button>
-          <button type="button">&raquo;Next</button>
-        </main>
+    <section id="carousel">
+      <div class="carousel-cont">
+        <ul class="carousel-list" type="list">
+          <li class="carousel-item">
+            <img src="" alt="1" />
+          </li>
+          <li class="carousel-item">
+            <img src="" alt="2" />
+          </li>
+          <li class="carousel-item">
+            <img src="" alt="3" />
+          </li>
+        </ul>
+        <button type="button" class="prev-btn">&lt;Prev</button>
+        <button type="button" class="next-btn">Next&gt;</button>
       </div>
     </section>
+    <script type="module" src="./assets/js/index.js"></script>
   </body>
 </html>

@@ -6,34 +6,18 @@ body {
   padding: 77px 149px 0px 149px !important;
 }
 
-#carousel {
-  margin-top: 72px;
-}
-
-#carousel button {
-  width: 140px;
-  height: 62px;
-  border-radius: 35px;
-  border: 3px solid #828282;
-  color: #828282;
-  background-color: white;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 28px;
-}
-
-.carousel-cont {
-  display: flex;
+.util-ir {
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -99999px;
 }
 
 .prev-btn {
   order: 0;
-}
-.carousel-list {
-  order: 1;
-  margin: 0 52px;
-  flex: 1;
-  display: flex;
 }
 
 .next-btn {
@@ -58,4 +42,50 @@ form > label > div {
   height: 54px;
   color: white;
   font-weight: 700;
+}
+
+/*슬라이더*/
+
+#carousel {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* #carousel button {
+  width: 140px;
+  height: 62px;
+  border-radius: 35px;
+  border: 3px solid #828282;
+  color: #828282;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+} */
+
+/* .carousel-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 464px;
+} */
+.carousel-list {
+  width: 464px;
+  height: 464px;
+  position: relative;
+}
+
+.carousel-item {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20.39568328857422px 0px #0000004d;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
+  -webkit-box-reflect: below 35px
+    linear-gradient(transparent 55%, rgba(255, 255, 255, 0.25));
+  transition: all 0.5s;
 }

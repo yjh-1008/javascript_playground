@@ -14,7 +14,9 @@ class FileUploaderBtn {
       const carouselList = document.querySelector('.carousel-list');
       const img = document.createElement('img');
       img.src = URL.createObjectURL(file);
-      img.className = "carousel-item";
+      // const reverseImag
+      // img.className = ""
+      img.className = "carousel-item sub";
       carouselList.appendChild(img);
     })
   }

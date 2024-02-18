@@ -1,7 +1,7 @@
-class FileUploaderBtn {
-
+import FileUploaderBtn from "./fileUploaderBtn.js"
+class PrevBtn {
   constructor() {
-    this.uploadBtn = document.querySelector('#image-upload-input');
+    this.prevBtn = document.querySelector('.prev-btn');
   }
 
   setup() {
@@ -21,7 +21,6 @@ class FileUploaderBtn {
           e.style.transform = `rotateY(${degree * i}deg) translateZ(250px) rotateY(-${degree*i}deg)`
         }
       }
-
       if(items.length >= 5) {
         if(i == 0) {
           e.style.transform = "rotateY(0deg) translateZ(250px)";
@@ -36,30 +35,33 @@ class FileUploaderBtn {
         } else {
           e.style.transform = `rotateY(${degree * i}deg) translateZ(250px) rotateY(-${degree*i}deg)`
         }
+  
       }
     })
+    
+
+  }
+
+  onSlide() {
+    const lists = document.querySelector('.carousel-list');
+    let imgs = document.querySelectorAll('.carousel-item');
+    if(imgs.length > 1) {
+      const now = document.querySelector('.now');
+      const before = lists.lastElementChild;
+      lists.insertBefore(before, imgs[0]);
+      now.classList.remove('now');
+      before.classList.add('now');
+    }
+    // this.changeTransform();
   }
 
   bindEvents() {
-    this.uploadBtn.addEventListener('change', (e) => {
-
-      const file = e.target.files[0];
-      const carouselList = document.querySelector('.carousel-list');
-      const items = carouselList.querySelectorAll('.carousel-item');
-      const first = items[0];
-      const img = document.createElement('img');
-      const li = document.createElement('li');
-      img.src = URL.createObjectURL(file);
-      li.classList.add("carousel-item");
-      li.classList.add("now");
-      li.appendChild(img);
-      first.classList.remove('now');
-
-      carouselList.insertBefore(li,items[0]);
+    this.prevBtn.addEventListener('click', (e) => {
+      this.onSlide();
       this.changeTransform();
-    })
-
+    });
   }
+
 }
 
-export default FileUploaderBtn;
+export default PrevBtn;

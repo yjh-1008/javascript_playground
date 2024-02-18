@@ -17,18 +17,18 @@ body {
 }
 
 .prev-btn {
-  left: 149px;
+  right: 209px;
 }
 
 .next-btn {
-  right: 149px;
+  left: 149px;
 }
 
 #image-upload-input {
   display: none;
 }
 
-form > labe {
+form > label {
   padding: 77px 149px 0px 149px;
 }
 
@@ -89,6 +89,8 @@ form > label > div {
   overflow: hidden;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   box-shadow: 0px 0px 20.39568328857422px 0px #0000004d;
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
@@ -97,7 +99,7 @@ form > label > div {
   transition: all 0.5s;
 }
 
-.carousel-item:first-child {
+/* .carousel-item:first-child {
   transform: rotateY(0deg) translateZ(250px);
 }
 .carousel-item:nth-child(2) {
@@ -106,7 +108,7 @@ form > label > div {
 
 .carousel-item:nth-child(3) {
   transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
-}
+} */
 
 .now img {
   filter: brightness(100%) !important;

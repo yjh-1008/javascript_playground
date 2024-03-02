@@ -1,0 +1,172 @@
+/* 웹 css */
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eae8fe;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  width: 386px;
+  height: 180px;
+}
+/* 주문 및 계산 화면 */
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 67px;
+}
+
+main section {
+  width: 360px;
+  background-color: #fff;
+}
+
+main section:first-child {
+  margin-right: 28px;
+  padding: 31px 27px 27px 27px;
+}
+
+/* 자판 버튼 UI */
+
+.cola-wrapper {
+  display: grid;
+  margin-inline: auto;
+  place-content: center;
+  grid-template-columns: repeat(3, 96px);
+  grid-template-rows: repeat(2, 130px);
+  gap: 12px;
+}
+
+.cola-wrapper article {
+  box-shadow: 0 0 4px #000000;
+  padding: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cola-wrapper .item img {
+  width: 36px;
+  height: 65px;
+}
+
+.cola-wrapper .item p {
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  padding: 6px 0;
+}
+
+/* .price-button {
+  background-color: #6327fe;
+  border: none;
+  border-radius: 50px;
+  width: 70px;
+  height: 22px;
+  color: white;
+} */
+
+/* 웹 하단  */
+.info-wrapper {
+  background-color: #eae8fe;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.info-wrapper > div {
+  padding: 10px 6px;
+}
+
+.info-wrapper div span:last-child {
+  float: right;
+}
+
+input {
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* 주문 목록 */
+
+.order-list {
+  overflow-y: scroll;
+  height: 106px;
+  margin: 4px 9px;
+}
+
+.order-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll_box::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.order-list::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: white;
+}
+
+.order-list::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+.order-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 8px;
+  margin-bottom: 6px;
+}
+
+.order-item img {
+  width: 18px;
+  height: 33px;
+}
+
+.order-item .order-name {
+  margin-left: 10px;
+}
+
+.order-item .order-count {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+/* 버튼 */
+.white-btn {
+  filter: drop-shadow(black 0 0 1px);
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.purple-btn {
+  background-color: #6327fe;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+}

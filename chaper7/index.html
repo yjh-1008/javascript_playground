@@ -21,65 +21,17 @@
       <main class="main-content">
         <section class="vending-machine">
           <div class="cola-wrapper">
-            <article class="item">
-              <img src="./assets/img/Original_Cola.png" alt="이미지" />
-              <p>Original_Cola</p>
-              <button
-                data-name="cola"
-                class="price-button"
-                type="button"
-                data-price=""
-                data-item=""
-                data-count=""
-                data-img
-              >
-                1000원
-              </button>
-            </article>
-            <article class="item">
-              <img src="./assets/img/Original_Cola.png" alt="이미지" />
-              <p>Original_Cola</p>
-              <button data-name="cola" class="price-button" type="button">
-                1000원
-              </button>
-            </article>
-            <article class="item">
-              <img src="./assets/img/Original_Cola.png" alt="이미지" />
-              <p>Original_Cola</p>
-              <button data-name="cola" class="price-button" type="button">
-                1000원
-              </button>
-            </article>
-            <article class="item sold-out">
-              <img src="./assets/img/Original_Cola.png" alt="이미지" />
-              <p>Original_Cola</p>
-              <button data-name="cola" class="price-button" type="button">
-                1000원
-              </button>
-            </article>
-            <article class="item">
-              <img src="./assets/img/Original_Cola.png" alt="이미지" />
-              <p>Original_Cola</p>
-              <button data-name="cola" class="price-button" type="button">
-                1000원
-              </button>
-            </article>
-            <article class="item">
-              <img src="./assets/img/Original_Cola.png" alt="이미지" />
-              <p>Original_Cola</p>
-              <button data-name="cola" class="price-button" type="button">
-                1000원
-              </button>
-            </article>
             <div class="info-wrapper">
               <div>
                 <span>잔액 : </span>
-                <span>1,000원</span>
+                <span class="balance">1,000원</span>
               </div>
             </div>
-            <button type="button" class="white-btn">거스름돈 반환</button>
-            <input type="text" placeholder="입금액 입력" />
-            <button type="button" class="white-btn">입금</button>
+            <button type="button" class="white-btn btn-return">
+              거스름돈 반환
+            </button>
+            <input type="text" placeholder="입금액 입력" class="input-put" />
+            <button type="button" class="white-btn btn-put">입금</button>
 
             <div class="info-wrapper">
               <div class="order-list">
@@ -100,86 +52,90 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="purple-btn">획득</button>
+            <button type="button" class="purple-btn btn-get">획득</button>
           </div>
         </section>
         <section class="shopping-basket">
           <div class="my-wallet">
-            <div>소지금 :</div>
-            <div class="money">25000</div>
-          </div>
-          <div class="section"></div>
-          <div class="cart">
-            <div class="cart-title">획득한 음료</div>
-          </div>
-          <div class="cart-list">
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
-            </div>
-            <div class="order-item">
-              <img src="./assets/img/Original_Cola.svg" alt="cola" />
-              <div class="order-name">Original_Cola</div>
-              <div class="order-count">1</div>
+            <div class="cont-mymoney">
+              <div>소지금 :</div>
+              <div class="money">25,000</div>
             </div>
           </div>
-          <div class="cost">
-            <div>총금액 :</div>
-            <div class="price">9,000원</div>
+          <div>
+            <div class="cart-wrapper">
+              <div class="cart-title">획득한 음료</div>
+              <div class="cart-list">
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_C ola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+                <div class="order-item">
+                  <img src="./assets/img/Original_Cola.svg" alt="cola" />
+                  <div class="order-name">Original_Cola</div>
+                  <div class="order-count">1</div>
+                </div>
+              </div>
+              <div class="cost">
+                <div>총금액 :</div>
+                <div class="price">9,000원</div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
     </div>
+    <script type="module" src="./assets/js/index.js"></script>
   </body>
 </html>

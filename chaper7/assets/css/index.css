@@ -2,11 +2,13 @@
 :root {
   --color-purple: #eae8fe;
 }
+body {
+  background-color: #eae8fe;
+}
+
 #app {
   width: 100vw;
-  height: 100vh;
   font-family: "Noto Sans KR", "sans-serif";
-  background-color: #eae8fe;
 }
 
 header {
@@ -23,6 +25,7 @@ header img {
 main {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0 28px;
   margin-top: 67px;
 }
@@ -38,7 +41,8 @@ main section:first-child {
 
 /* 자판 버튼 UI */
 
-.cola-wrapper {
+.cola-wrapper,
+.wrapper {
   display: grid;
   margin-inline: auto;
   place-content: center;
@@ -181,7 +185,7 @@ input {
 }
 
 .order-item .order-name {
-  font-size: 12px;
+  font-size: 9px;
   margin-left: 10px;
 }
 
@@ -209,6 +213,10 @@ input {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
+.money {
+  font-weight: 700;
+}
+
 .purple-btn {
   background-color: #6327fe;
   color: white;
@@ -220,6 +228,7 @@ input {
 /* 오른쪽 화면 */
 
 .shopping-basket {
+  background-color: var(--color-purple);
   /* padding: 0 27px; */
 }
 
@@ -230,10 +239,15 @@ input {
   width: 100%;
 } */
 
+/* 소지금 */
 .my-wallet {
-  background: var(--color-purple);
+  background: white;
+  padding: 9px 27px;
+}
+
+.cont-mymoney {
+  background-color: var(--color-purple);
   display: flex;
-  margin-block: 9px;
   justify-content: space-between;
   padding: 6px 10px;
   font-size: 14px;
@@ -243,10 +257,16 @@ input {
   border-radius: 5px;
 }
 
+.cart-wrapper {
+  margin-top: 20px;
+  padding: 25px 27px 26px;
+  background-color: #fff;
+}
+
 .cart-title {
   text-align: center;
-  margin-top: 25px;
   font-size: 14px;
+  padding-bottom: 13px;
   font-weight: 700;
 }
 
@@ -254,7 +274,7 @@ input {
   height: 375px;
   overflow-y: scroll;
   background-color: var(--color-purple);
-  margin-top: 13px;
+
   width: 300px;
   padding: 12px;
   margin-inline: auto;
@@ -285,5 +305,22 @@ input {
   font-weight: 500;
   display: flex;
   justify-content: end;
-  margin-right: 26px;
+}
+
+/* 미디어 쿼리 */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    background-color: #fff;
+  }
+  main {
+    margin-top: 8px;
+  }
+  header img {
+    width: 166px;
+    height: 71px;
+  }
+  .cart-wrapper {
+    margin-top: 0px;
+  }
 }

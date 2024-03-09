@@ -36,7 +36,7 @@ class ColaGenerator{
           data-count=${el.count}
           data-img=${el.img}
         >
-          ${el.price}
+          ${el.price + '원'}
         </button>
       `
       article.classList.add("item");

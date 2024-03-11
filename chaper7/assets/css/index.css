@@ -89,6 +89,7 @@ main section:first-child {
   left: 0;
   border-radius: 10px;
   box-sizing: border-box;
+  pointer-events: none;
   background: no-repeat center/58px 45px url("../img/Sold-out.png")
     rgba(0, 0, 0, 0.8);
 }

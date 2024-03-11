@@ -18,20 +18,39 @@
       <div class="content-container">
         <article class="main">
           <h2>나의MBTI</h2>
-          <div>My Best IT personalities</div>
-          <div>"나의 개발 유형은?!"</div>
+          <div class="intro">My Best IT personalities</div>
+          <div class="comment">"나의 개발 유형은?!"</div>
           <img src="./assets/img/Mbit.png" alt="메인 화면 이미지" />
           <button type="button">시작하기</button>
         </article>
-        <acrticle class="test-content">
-          <div>2/10</div>
-          <div></div>
-          <div>
+        <article class="test-content">
+          <div class="page">2/10</div>
+          <progress id="progress" min="1" max="10" value="1"></progress>
+          <div class="question">
             Q. 여러분의 서비스가 성공하였따면, 서비스를 성공시킨 요소는?
           </div>
-        </acrticle>
+          <div class="question-list">
+            <label>
+              <input type="radio" name="1" value="text" />
+              <span>1. 데이터 분석을 통한 효과적인 개인 맞춤형 서비스</span>
+            </label>
+            <label>
+              <input type="radio" name="1" value="text" />
+              <span>1. 데이터 분석을 통한 효과적인 개인 맞춤형 서비스</span>
+            </label>
+            <label>
+              <input type="radio" name="1" value="text" />
+              <span>1. 데이터 분석을 통한 효과적인 개인 맞춤형 서비스</span>
+            </label>
+            <label>
+              <input type="radio" name="1" value="text" />
+              <span>1. 데이터 분석을 통한 효과적인 개인 맞춤형 서비스</span>
+            </label>
+          </div>
+        </article>
         <article class="loading">
           <img src="/assets/img/Loding.png" alt="로딩" />
+          <div>분석중입니다...</div>
         </article>
         <article class="result">
           <div>Game을 좋아하고, 상상을 즐겨하는 당신은!</div>

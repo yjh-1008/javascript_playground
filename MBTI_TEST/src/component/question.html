@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/index.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" type="text/css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <form action="/submit" id="question-form" method="post">
+        <article class="test-content">
+          <div class="progress-bar">
+            <div class="page">2/10</div>
+            <progress id="progress" min="1" max="10" value="1"></progress>
+          </div>
+
+          <div class="question">
+            Q. 여러분의 서비스가 성공하였따면, 서비스를 성공시킨 요소는?
+          </div>
+          <div class="question-list">
+            <label>
+              <input type="radio" name="1" value="text" />
+              <span>1. 데이터 분석을 통한 효과적인 개인 맞춤형 서비스</span>
+            </label>
+            <label>
+              <input type="radio" name="1" value="text" />
+              <span>1. 데이터 분석을 통한 효과적인 개인 맞춤형 서비스</span>
+            </label>
+            <label>
+              <input type="radio" name="1" value="text" />
+              <span>1. 데이터 분석을 통한 효과적인 개인 맞춤형 서비스</span>
+            </label>
+            <label>
+              <input type="radio" name="1" value="text" />
+              <span>1. 데이터 분석을 통한 효과적인 개인 맞춤형 서비스</span>
+            </label>
+          </div>
+          <div class="button-box">
+            <button>이전</button>
+            <button>다음</button>
+          </div>
+        </article>
+      </form>
+    </div>
+  </body>
+</html>

@@ -79,6 +79,12 @@ button {
   font-size: 18px;
   font-weight: 900;
 }
+
+.progress-bar {
+  width: 100%;
+  text-align: center;
+}
+
 #progress {
   width: 100%;
   margin: 12px 0 40px;
@@ -100,12 +106,45 @@ button {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+  line-height: 23px;
 }
 
 .question-list label {
+  font-size: 16px;
+  text-indent: -22px;
+  cursor: pointer;
+  margin: 0 0 12px 22px;
+}
+
+.question-wrapper {
+  display: none;
+}
+
+.question-wrapper.on {
+  display: block;
+}
+
+.button-box {
   display: flex;
-  align-items: start;
-  margin-bottom: 12px;
+  justify-content: space-between;
+}
+
+.style-center {
+  justify-content: center;
+}
+
+.button-box button {
+  width: 100px;
+  border: none;
+  height: 40px;
+  background: #9b51e0;
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+}
+
+.button-box.style-center {
+  justify-content: center;
 }
 
 .loading img {
@@ -143,8 +182,10 @@ button {
 }
 
 .character-title {
+  margin-top: 8px;
   font-size: 16px;
   font-weight: 700;
+  line-height: 23px;
   text-align: center;
 }
 
@@ -176,11 +217,49 @@ button {
   background-color: #9b51e0;
 }
 
+.character-info li {
+  line-height: 23px;
+}
+
 .character-info li + li {
   margin-top: 12px;
-  text-align: center;
 }
 
 .result button {
   margin: 36px 0px 91px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    margin-top: 56px !important;
+  }
+
+  .main h2 {
+    font-size: 45px;
+  }
+  .main .intro {
+    font-size: 14px;
+  }
+
+  .question {
+    font-size: 16px;
+  }
+
+  .question-box label > span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .loading > div {
+    font-size: 14px;
+  }
+
+  .result button {
+    margin-top: 30px;
+  }
+
+  .character-info li {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }

@@ -27,18 +27,47 @@
 
     const buttonBoxes = document.querySelectorAll('.button-box');
     const firstButtonBox = buttonBoxes[0];
+    console.log(buttonBoxes);
     const lastButtonBox = buttonBoxes[buttonBoxes.length-1];
     firstButtonBox.innerHTML = 
     `
-      <button>다음</button>
+      <button class="next-btn"  type="button">다음</button>
     `
     firstButtonBox.classList.add('style-center');
 
     lastButtonBox.innerHTML = `
-    <button>이전</button>
-    <button>제출</button>
+    <button class="previous-btn"  type="button">이전</button>
+    <button type='submit' class='next-btn'>제출</button>
     `
+    
+    const prevButtons = document.querySelectorAll('.previous-btn');
+    const nextBtns = document.querySelectorAll('.next-btn');
+    for(let prevBtn of prevButtons) {
+      prevBtn.addEventListener('click', (e) => {
+        // e.preventDefault();
+        let current = document.querySelectorAll('.question-wrapper.on') 
+          movePrev(current[0]);
+      })
+    }
+    // console.log(nextBtns)
+    for(let nextBtn of nextBtns) {
+      nextBtn.addEventListener('click', (e) => {
+        // e.preventDefault();
+        let current = document.querySelectorAll('.question-wrapper.on input') 
+        let isChecked = false;
+        current.forEach((item) => {
+          if(item.checked) {
+            let next = document.querySelectorAll('.question-wrapper.on');
+            moveNext(next[0]); 
+            isChecked = true;
+          }
+        })
+        if(!isChecked) alert('문항을 선택해주세요.');
+      })
+    }
 
+
+    
   })
 })();
 
@@ -61,7 +90,7 @@ function setElement(question, answerArr) {
   <article class="test-content">
   <div class="progress-bar">
     <div class="page">${question.pk}/10</div>
-    <progress id="progress" min="1" max="10" value="1"></progress>
+    <progress id="progress" min="1" max="10" value="${question.pk}"></progress>
   </div>
 
    <div class="question-box">
@@ -72,12 +101,29 @@ function setElement(question, answerArr) {
         ${tempContainer.innerHTML}
      </div>
      <div class="button-box">
-       <button>이전</button>
-        <button>다음</button>
+     <button class="previous-btn" type="button">이전</button>
+     <button class="next-btn" type="button">다음</button>
       </div>
     </div>
   </article>
   `
   tempContainer.remove();
   return questionItem;
+}
+
+function moveNext(currentItem) {
+  currentItem.classList.remove('on');
+  console.log(currentItem);
+  let next = currentItem.nextElementSibling;
+  if(next) {
+    next.classList.add('on');
+  }
+}
+
+function movePrev(currentItem) {
+  currentItem.classList.remove('on');
+  let prev = currentItem.previousElementSibling;
+  if(prev) {
+    prev.classList.add('on');
+  }
 }

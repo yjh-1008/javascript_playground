@@ -1,0 +1,29 @@
+body {
+  background: #6fcf97;
+}
+
+.content-wrapper {
+  width: 310px;
+  margin: 110px auto 0;
+}
+
+.info-wrapper * {
+  color: #fff;
+}
+
+.puzzle {
+  width: 310px;
+  height: 310px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 30px;
+}
+
+button {
+  display: block;
+  width: 100%;
+}
+
+.start-btn {
+  margin-bottom: 14px;
+}

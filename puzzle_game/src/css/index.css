@@ -7,17 +7,74 @@ body {
   margin: 110px auto 0;
 }
 
+.info-wrapper {
+  width: 105px;
+  height: 46px;
+}
+
 .info-wrapper * {
   color: #fff;
+}
+
+.move-count,
+.play-time {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+}
+
+.move-count div,
+.play-time div {
+  flex: 1;
 }
 
 .puzzle {
   width: 310px;
   height: 310px;
   display: grid;
+  gap: 20px 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 30px;
 }
+
+.puzzle > div {
+  position: relative;
+}
+
+.puzzle .tile {
+  width: 70px;
+  height: 70px;
+  color: #20a156;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 43px;
+}
+
+.puzzle .shadow {
+  position: absolute;
+  border-radius: 10px;
+  top: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: #20a156;
+}
+
+/* .puzzle .tile::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 70px;
+  height: 70px;
+  top: 5px;
+  
+} */
 
 button {
   display: block;

@@ -16,14 +16,14 @@ body {
   color: #fff;
 }
 
-.move-count,
+.count,
 .play-time {
   width: 100%;
   display: flex;
   gap: 18px;
 }
 
-.move-count div,
+.count,
 .play-time div {
   flex: 1;
   font-weight: 500;
@@ -44,7 +44,6 @@ body {
   height: 75px;
   background-color: #20a156;
   border-radius: 18px;
-  cursor: default;
 }
 
 .puzzle .tile {
@@ -64,7 +63,20 @@ body {
   transition: transform 0.5s;
 }
 
-.tile.none {
+.none {
+  width: 70px;
+  height: 70px;
+  color: #20a156;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  background-color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 43px;
+  display: flex;
+  justify-content: center;
   background-color: #20a156;
 }
 
